@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="b6j-jk-4xP">
+    <dependencies>
+        <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller - Fotos-->
+        <scene sceneID="Lsp-01-lP4">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Hsi-xQ-eQY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Fotos" image="photo.png" id="6D6-y4-Niu"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="IIQ-G7-mfc">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aql-bZ-Bzu" kind="relationship" relationship="rootViewController" id="hiN-XV-uub"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tl1-T7-tFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313" y="996"/>
+        </scene>
+        <!--Album View Controller - Álbuns-->
+        <scene sceneID="jNq-8Y-Mtv">
+            <objects>
+                <viewController id="aql-bZ-Bzu" customClass="AlbumViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t3D-Jr-jWn"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sc9-iZ-wHT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1yi-1q-sfQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JK6-MH-ASZ">
+                                <rect key="frame" x="0.0" y="246" width="320" height="267"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="aql-bZ-Bzu" id="1VR-TD-4kG"/>
+                                    <outlet property="delegate" destination="aql-bZ-Bzu" id="bPl-N9-hcv"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="AgendaBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="dlq-4F-rQm">
+                                <rect key="frame" x="0.0" y="65" width="320" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="173" id="fJv-mW-aKg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JK6-MH-ASZ" firstAttribute="trailing" secondItem="dlq-4F-rQm" secondAttribute="trailing" id="2vV-LO-2fg"/>
+                            <constraint firstItem="dlq-4F-rQm" firstAttribute="leading" secondItem="1yi-1q-sfQ" secondAttribute="leading" id="4bz-jH-uU0"/>
+                            <constraint firstItem="dlq-4F-rQm" firstAttribute="top" secondItem="t3D-Jr-jWn" secondAttribute="bottom" constant="1" id="feE-kS-WrB"/>
+                            <constraint firstItem="JK6-MH-ASZ" firstAttribute="top" secondItem="dlq-4F-rQm" secondAttribute="bottom" constant="8" symbolic="YES" id="flL-26-sxO"/>
+                            <constraint firstItem="JK6-MH-ASZ" firstAttribute="leading" secondItem="dlq-4F-rQm" secondAttribute="leading" id="jxy-cf-d5c"/>
+                            <constraint firstItem="Sc9-iZ-wHT" firstAttribute="top" secondItem="JK6-MH-ASZ" secondAttribute="bottom" constant="6" id="opq-wE-P1g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Álbuns" id="FjL-Ft-20e">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="Htc-HG-guK">
+                            <connections>
+                                <action selector="refreshData:" destination="aql-bZ-Bzu" id="07g-7y-dRu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="albumTableView" destination="JK6-MH-ASZ" id="b20-Kq-f8v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XK9-Eh-yVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888" y="996"/>
+        </scene>
+        <!--Musica View Controller - music-->
+        <scene sceneID="xFN-px-ob9">
+            <objects>
+                <viewController id="dCy-ht-DTg" customClass="MusicaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5ld-1J-l2k"/>
+                        <viewControllerLayoutGuide type="bottom" id="oRx-Tp-xLg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eRl-iY-5kn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="xepopmusic.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Uu-S4-kcR">
+                                <rect key="frame" x="0.0" y="44" width="320" height="118"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Kbd-Tj-NTE">
+                                <rect key="frame" x="0.0" y="212" width="320" height="292"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dCy-ht-DTg" id="xcX-1A-RjP"/>
+                                    <outlet property="delegate" destination="dCy-ht-DTg" id="970-ox-un2"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8m9-v9-ASn">
+                                <rect key="frame" x="8" y="170" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="6Zg-7m-BlX"/>
+                                    <constraint firstAttribute="height" constant="33" id="hbC-3H-bnl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" image="playbutton.png">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="dCy-ht-DTg" eventType="touchUpInside" id="ge3-gy-iFW"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hqe-fz-8O1">
+                                <rect key="frame" x="49" y="170" width="262" height="34"/>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="dCy-ht-DTg" eventType="valueChanged" id="IOl-uI-8uz"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAt-jT-Kz0">
+                                <rect key="frame" x="139" y="139" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="iPi-gm-pN8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U57-m4-vPl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Músicas" id="fz3-Bj-9HA">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="sTI-tz-H6X">
+                                            <connections>
+                                                <action selector="refreshData:" destination="dCy-ht-DTg" id="2kP-Mi-O8t"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hqe-fz-8O1" secondAttribute="trailing" constant="11" id="6iQ-CI-gvI"/>
+                            <constraint firstItem="hqe-fz-8O1" firstAttribute="top" secondItem="3Uu-S4-kcR" secondAttribute="bottom" constant="8" symbolic="YES" id="7y5-DA-ZGs"/>
+                            <constraint firstItem="3Uu-S4-kcR" firstAttribute="top" secondItem="U57-m4-vPl" secondAttribute="bottom" id="9rN-lj-Mjk"/>
+                            <constraint firstItem="VAt-jT-Kz0" firstAttribute="top" secondItem="U57-m4-vPl" secondAttribute="bottom" constant="95" id="CS5-Cv-0XN"/>
+                            <constraint firstItem="U57-m4-vPl" firstAttribute="trailing" secondItem="3Uu-S4-kcR" secondAttribute="trailing" id="EP3-tp-CGu"/>
+                            <constraint firstItem="3Uu-S4-kcR" firstAttribute="trailing" secondItem="Kbd-Tj-NTE" secondAttribute="trailing" id="Iec-cb-R8m"/>
+                            <constraint firstItem="3Uu-S4-kcR" firstAttribute="leading" secondItem="U57-m4-vPl" secondAttribute="leading" id="PPk-tK-Cyq"/>
+                            <constraint firstItem="8m9-v9-ASn" firstAttribute="leading" secondItem="eRl-iY-5kn" secondAttribute="leading" constant="8" id="UEm-Zb-E8c"/>
+                            <constraint firstItem="U57-m4-vPl" firstAttribute="top" secondItem="eRl-iY-5kn" secondAttribute="top" id="azp-Bf-LVO"/>
+                            <constraint firstItem="8m9-v9-ASn" firstAttribute="top" secondItem="3Uu-S4-kcR" secondAttribute="bottom" constant="8" symbolic="YES" id="df6-6u-8wk"/>
+                            <constraint firstItem="hqe-fz-8O1" firstAttribute="leading" secondItem="8m9-v9-ASn" secondAttribute="trailing" constant="10" id="fv7-VF-0hd"/>
+                            <constraint firstItem="3Uu-S4-kcR" firstAttribute="leading" secondItem="Kbd-Tj-NTE" secondAttribute="leading" id="fvq-wH-Er8"/>
+                            <constraint firstItem="Kbd-Tj-NTE" firstAttribute="top" secondItem="8m9-v9-ASn" secondAttribute="bottom" constant="9" id="jcb-pO-WmI"/>
+                            <constraint firstItem="hqe-fz-8O1" firstAttribute="top" secondItem="VAt-jT-Kz0" secondAttribute="bottom" constant="10" id="oaY-xU-Xcz"/>
+                            <constraint firstItem="oRx-Tp-xLg" firstAttribute="top" secondItem="Kbd-Tj-NTE" secondAttribute="bottom" constant="15" id="tfD-Ho-Ba0"/>
+                            <constraint firstItem="3Uu-S4-kcR" firstAttribute="centerX" secondItem="VAt-jT-Kz0" secondAttribute="centerX" id="vjl-Ax-5UJ"/>
+                            <constraint firstItem="Kbd-Tj-NTE" firstAttribute="leading" secondItem="eRl-iY-5kn" secondAttribute="leading" id="wvP-r8-X83"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="music" image="music.png" id="fIu-yC-Z0r"/>
+                    <connections>
+                        <outlet property="button" destination="8m9-v9-ASn" id="viM-OU-Bth"/>
+                        <outlet property="musicTableView" destination="Kbd-Tj-NTE" id="pnw-zq-dxc"/>
+                        <outlet property="positionLabel" destination="VAt-jT-Kz0" id="yuP-na-zPa"/>
+                        <outlet property="progressSlider" destination="hqe-fz-8O1" id="B8X-Cf-jEQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uIM-qT-pEt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="342"/>
+        </scene>
+        <!--Navigation Controller - Agenda-->
+        <scene sceneID="5Gl-pG-oZ0">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="JuU-oZ-afq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Agenda" id="LCO-u1-Q40"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Dxg-XI-0LE">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i2O-zW-kI9">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="8tL-an-4RB" kind="relationship" relationship="rootViewController" id="Lu4-rI-sWT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6k-FU-Xm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="313" y="-394"/>
+        </scene>
+        <!--Agenda View Controller - Agenda XéPop-->
+        <scene sceneID="WZN-ms-kfQ">
+            <objects>
+                <viewController autoresizesArchivedViewToFullSize="NO" id="8tL-an-4RB" customClass="AgendaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SOl-Xw-6z4"/>
+                        <viewControllerLayoutGuide type="bottom" id="O7r-wH-iK0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BQe-2f-qCm">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AgendaBackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="u9t-Iz-TM9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="124" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zef-YQ-Huj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8tL-an-4RB" id="sxn-bj-1UE"/>
+                                    <outlet property="delegate" destination="8tL-an-4RB" id="KW1-hI-Dgc"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="u9t-Iz-TM9" secondAttribute="centerY" id="2hH-IQ-eE1"/>
+                            <constraint firstAttribute="bottom" secondItem="zef-YQ-Huj" secondAttribute="bottom" id="7rY-eG-Im4"/>
+                            <constraint firstItem="u9t-Iz-TM9" firstAttribute="top" secondItem="zef-YQ-Huj" secondAttribute="top" id="HV1-rN-CZr"/>
+                            <constraint firstItem="u9t-Iz-TM9" firstAttribute="bottom" secondItem="zef-YQ-Huj" secondAttribute="bottom" id="Yxj-e6-FnR"/>
+                            <constraint firstAttribute="centerX" secondItem="u9t-Iz-TM9" secondAttribute="centerX" id="aQQ-vA-AWM"/>
+                            <constraint firstAttribute="centerY" secondItem="zef-YQ-Huj" secondAttribute="centerY" id="c56-SX-wGe"/>
+                            <constraint firstItem="zef-YQ-Huj" firstAttribute="top" secondItem="BQe-2f-qCm" secondAttribute="top" id="ePM-OL-fJb"/>
+                            <constraint firstAttribute="centerX" secondItem="zef-YQ-Huj" secondAttribute="centerX" id="iFo-7z-7SW"/>
+                            <constraint firstAttribute="trailing" secondItem="zef-YQ-Huj" secondAttribute="trailing" id="t3I-AK-9ru"/>
+                            <constraint firstAttribute="centerX" secondItem="u9t-Iz-TM9" secondAttribute="centerX" id="ux6-Da-fKd"/>
+                            <constraint firstItem="zef-YQ-Huj" firstAttribute="leading" secondItem="BQe-2f-qCm" secondAttribute="leading" id="zaL-F3-yrQ"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <tabBarItem key="tabBarItem" title="Agenda" id="7Eh-RO-cJV"/>
+                    <navigationItem key="navigationItem" title="Agenda XéPop" id="JmM-cE-43T">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="refresh" id="Gcw-Ws-ivR">
+                            <connections>
+                                <action selector="refresData:" destination="8tL-an-4RB" id="Upb-wf-Io3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myTableView" destination="zef-YQ-Huj" id="vCU-Dy-HAm"/>
+                        <outlet property="navigationBar" destination="JmM-cE-43T" id="UbG-Ip-pcE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tdv-Gk-rFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="894" y="-258"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LbM-d7-Xmc">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="b6j-jk-4xP" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ApV-K6-YqM">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JuU-oZ-afq" kind="relationship" relationship="viewControllers" id="qIa-BY-Fps"/>
+                        <segue destination="dCy-ht-DTg" kind="relationship" relationship="viewControllers" id="Jhi-GH-rYV"/>
+                        <segue destination="Hsi-xQ-eQY" kind="relationship" relationship="viewControllers" id="JkL-nk-Gnj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsR-wA-RvV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-318" y="147"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AgendaBackground.png" width="320" height="367"/>
+        <image name="music.png" width="32" height="32"/>
+        <image name="photo.png" width="32" height="32"/>
+        <image name="playbutton.png" width="64" height="64"/>
+        <image name="xepopmusic.png" width="320" height="133"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

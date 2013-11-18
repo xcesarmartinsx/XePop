@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController">
+            <connections>
+                <outlet property="date" destination="20" id="65"/>
+                <outlet property="detailEnd" destination="381" id="401"/>
+                <outlet property="mapaView" destination="10" id="68"/>
+                <outlet property="view" destination="1" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" contentMode="scaleToFill" id="1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="backgroundDetail.png" translatesAutoresizingMaskIntoConstraints="NO" id="219">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="10">
+                    <rect key="frame" x="0.0" y="9" width="320" height="169"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="169" id="10p-Sw-cWZ"/>
+                    </constraints>
+                </mapView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Data:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17">
+                    <rect key="frame" x="48" y="186" width="41" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="41" id="oAT-MO-H19"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="20">
+                    <rect key="frame" x="104" y="186" width="208" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Endereço:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36">
+                    <rect key="frame" x="19" y="227" width="78" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="textLabel.png" translatesAutoresizingMaskIntoConstraints="NO" id="236">
+                    <rect key="frame" x="8" y="256" width="304" height="65"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62">
+                    <rect key="frame" x="0.0" y="471" width="320" height="53"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" image="botaoCompartilhar.png">
+                        <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="facebook:" destination="-1" eventType="touchUpInside" id="141"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="381">
+                    <rect key="frame" x="14" y="262" width="292" height="53"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="53" id="HCm-4a-Bxd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <size key="shadowOffset" width="0.0" height="-2"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="236" firstAttribute="top" secondItem="36" secondAttribute="bottom" constant="8" symbolic="YES" id="1Uy-2r-MF1"/>
+                <constraint firstItem="236" firstAttribute="trailing" secondItem="20" secondAttribute="trailing" id="1r1-vl-Ubd"/>
+                <constraint firstItem="381" firstAttribute="centerY" secondItem="236" secondAttribute="centerY" id="7S1-G8-47R"/>
+                <constraint firstItem="219" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="ClT-JV-7H4"/>
+                <constraint firstItem="236" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="8" id="Dqk-iv-hrw"/>
+                <constraint firstItem="10" firstAttribute="top" secondItem="1" secondAttribute="top" constant="9" id="Mb4-Sj-SCt"/>
+                <constraint firstItem="219" firstAttribute="leading" secondItem="10" secondAttribute="leading" id="PJZ-BQ-PSZ"/>
+                <constraint firstItem="10" firstAttribute="trailing" secondItem="62" secondAttribute="trailing" id="QBI-RA-mYi"/>
+                <constraint firstItem="36" firstAttribute="top" secondItem="17" secondAttribute="bottom" constant="20" id="Qa6-dp-qtr"/>
+                <constraint firstItem="36" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="19" id="SD1-08-auN"/>
+                <constraint firstItem="17" firstAttribute="top" secondItem="10" secondAttribute="bottom" constant="8" symbolic="YES" id="TiQ-Mr-hSC"/>
+                <constraint firstItem="381" firstAttribute="centerX" secondItem="62" secondAttribute="centerX" id="UA0-zm-NFc"/>
+                <constraint firstItem="381" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="14" id="UGk-8p-Nsb"/>
+                <constraint firstItem="17" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="48" id="Vnl-rF-Nwo"/>
+                <constraint firstAttribute="trailing" secondItem="10" secondAttribute="trailing" id="ZUg-xu-eVF"/>
+                <constraint firstItem="219" firstAttribute="top" secondItem="1" secondAttribute="top" id="b2N-50-An2"/>
+                <constraint firstItem="381" firstAttribute="centerX" secondItem="236" secondAttribute="centerX" id="cVR-13-wUM"/>
+                <constraint firstAttribute="bottom" secondItem="62" secondAttribute="bottom" constant="44" id="dm4-Qq-YTP"/>
+                <constraint firstItem="381" firstAttribute="top" secondItem="36" secondAttribute="bottom" constant="14" id="mw3-GC-gL2"/>
+                <constraint firstAttribute="bottom" secondItem="219" secondAttribute="bottom" id="r6C-Lo-bzt"/>
+                <constraint firstItem="20" firstAttribute="leading" secondItem="17" secondAttribute="trailing" constant="15" id="v5G-Kb-ixd"/>
+                <constraint firstItem="20" firstAttribute="baseline" secondItem="17" secondAttribute="baseline" id="w9h-d4-uC3"/>
+                <constraint firstItem="10" firstAttribute="leading" secondItem="62" secondAttribute="leading" id="zuF-CB-Oei"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backgroundDetail.png" width="320" height="367"/>
+        <image name="botaoCompartilhar.png" width="324" height="53"/>
+        <image name="textLabel.png" width="308" height="81"/>
+    </resources>
+</document>
